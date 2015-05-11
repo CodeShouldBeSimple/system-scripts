@@ -28,6 +28,7 @@ This is a systemd unit template to manage mongod via systemctl, allowing multipl
 ###Gotchas###
 On Fedora 16 through 20 (I'm assuming), enabling services using unit templates doesn't work.  They claim to have fixed it in Fedora 19, but they really haven't.
 
-    ln -s /lib/systemd/system/mongod\@.service /etc/systemd/system/multi-user.target.wants/mongod\@<instance name>.service
+    ln -s /lib/systemd/system/mongod\@.service \
+    /etc/systemd/system/multi-user.target.wants/mongod\@<instance name>.service
 
-Be sure to replace "<instance name>" with the name that maps to your mongodb configuration file for this instance, e.g. /etc/mongod-something.conf.
+Be sure to replace "&lt;instance name&gt;" with the name that maps to your mongodb configuration file for this instance, e.g. /etc/mongod-something.conf.
