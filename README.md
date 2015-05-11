@@ -15,7 +15,7 @@ Anyway, I prefer to stick to one system of managing my services, and I want it d
     systemctl enable mongod.service
     systemctl start mongod.service
 
-##mongod&amp;.service##
+##mongod&#64;.service##
 
 This is a systemd unit template to manage mongod via systemctl, allowing multiple instances of mongod to run on a single host.
 
