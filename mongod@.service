@@ -1,0 +1,13 @@
+[Unit]
+Description=MongoDB Server: %i
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/mongod -f /etc/mongod-%i.conf
+ExecStop=/usr/bin/mongod -f /etc/mongod-%i.conf --shutdown
+User=mongod
+Group=mongod
+
+[Install]
+WantedBy=multi-user.target
